@@ -1,0 +1,51 @@
+{% extends 'entidades/index.html' %}
+
+
+{% block menu %}
+{% endblock menu %}
+
+{% block titulo %}
+<div class="bg-dark text-white p-4 bg-opacity-50">
+<h2 class="text-center">Política de Privacidad</h2>
+<p>En Auto Market, nos comprometemos a proteger y respetar tu privacidad. Esta política de privacidad describe cómo recopilamos, usamos y protegemos tu información personal.</p>
+<a class="btn btn-danger" href="{% url 'home' %}"><i class="fa-solid fa-left-long"></i></a>
+</div>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<section id="politica-de-privacidad" class="bg-dark text-white p-4">
+    <div class="container">
+        <h3>Información que recopilamos</h3>
+        <p>Podemos recopilar y procesar la siguiente información sobre ti:</p>
+        <ul>
+            <li>Información que proporcionas al completar formularios en nuestro sitio web.</li>
+            <li>Detalles de las transacciones que realizas a través de nuestro sitio web.</li>
+            <li>Información que proporcionas al comunicarte con nosotros por cualquier motivo.</li>
+        </ul>
+        
+        <h3>Uso de tu información</h3>
+        <p>Utilizamos la información que recopilamos de las siguientes maneras:</p>
+        <ul>
+            <li>Para proporcionarte la información, productos y servicios que nos solicitas.</li>
+            <li>Para cumplir con nuestras obligaciones derivadas de cualquier contrato entre tú y nosotros.</li>
+            <li>Para notificarte sobre cambios en nuestros servicios.</li>
+        </ul>
+        
+        <h3>Protección de tu información</h3>
+        <p>Nos comprometemos a asegurar que tu información esté segura. Para evitar el acceso no autorizado o la divulgación, hemos implementado procedimientos físicos, electrónicos y administrativos adecuados para proteger y asegurar la información que recopilamos en línea.</p>
+        
+        <h3>Divulgación de tu información</h3>
+        <p>No venderemos, distribuiremos ni arrendaremos tu información personal a terceros a menos que tengamos tu permiso o la ley nos lo exija.</p>
+        
+        <h3>Acceso a tu información</h3>
+        <p>Tienes derecho a solicitar una copia de la información personal que tenemos sobre ti. Si deseas una copia de esta información, por favor contáctanos en: [Tu correo electrónico].</p>
+        
+        <h3>Cambios a nuestra Política de Privacidad</h3>
+        <p>Podemos actualizar nuestra política de privacidad de vez en cuando. Te notificaremos cualquier cambio publicando la nueva política de privacidad en esta página. Te recomendamos revisar esta página periódicamente para estar al tanto de cualquier cambio.</p>
+        
+        <h3>Contacto</h3>
+        <p>Si tienes alguna pregunta sobre esta política de privacidad o sobre el tratamiento de tu información, por favor contáctanos en: [Tu correo electrónico].</p>
+    </div>
+</section>
+    {% endblock contenido %}

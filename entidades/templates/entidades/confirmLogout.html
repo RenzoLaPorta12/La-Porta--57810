@@ -1,0 +1,55 @@
+{% extends 'entidades/index.html' %}
+
+
+
+
+
+{% block menu %}
+{% endblock menu %}
+
+{% block titulo %}
+<div class="position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-75">
+<h1 class="text-light">¿realmente desea cerrar sesion?</h1>
+<div> 
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Si</button>
+        <a class="btn btn-danger" href="{% url 'home' %}">No</a>
+        </form> 
+</div>
+<br>
+</div>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+{% endblock titulo %}
+{% block contenido %}
+{% endblock contenido %}
+
+{% block info %}
+{% endblock info %}

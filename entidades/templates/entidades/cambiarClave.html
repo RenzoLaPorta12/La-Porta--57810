@@ -1,0 +1,23 @@
+{% extends 'entidades/index.html' %}
+
+
+{% block titulo %}
+<h1>Actualizar Contraseña</h1>
+<pre>
+
+
+
+</pre>
+{% endblock titulo %}
+
+{% block contenido %}
+<section class="bg-dark text-white p-4">
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <p> <input class="btn btn-success" type="submit" value="Actualizar"> <a class="btn btn-danger" href="{% url 'perfil' %}"> Volver </a> </p>
+</form>
+</section>
+{% endblock contenido %}

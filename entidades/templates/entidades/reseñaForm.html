@@ -1,0 +1,26 @@
+{% extends 'entidades/index.html' %}
+
+
+{% block titulo %}
+<div class="bg-dark bg-opacity-75">
+    <h1>Importancia de las Reseñas</h1>
+    <h4>Al compartir tus experiencias y opiniones sobre los automóviles que has adquirido, proporcionas información valiosa que puede guiar a otros usuarios en su decisión de compra. Además, tus reseñas permiten a los vendedores mejorar sus ofertas y servicios. Apreciamos tu contribución para hacer de AutoMarket un lugar más confiable y útil para todos.</h4>
+    {% endblock titulo %}
+    
+    
+{% block contenido %}
+    <section class="bg-dark text-white p-4">
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+        <input class="btn btn-success" type="submit" value="publicar">
+    </form>
+</section>
+{% endblock contenido %}

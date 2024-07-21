@@ -1,0 +1,55 @@
+{% extends 'entidades/index.html' %}
+
+
+
+
+
+{% block menu %}
+{% endblock menu %}
+
+{% block titulo %}
+<div class="position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-75">
+<h1 class="text-light">Que vehiculo desea buscar?</h1>
+<form action="{% url 'encontrarCamioneta' %}" method="get">
+    {% csrf_token %}
+    <table>
+        <input class="text-center text-light bg-secondary" type="text" name="buscar" id="buscar">
+    </table>
+    <p><a class="position-absolute bottom-0 start-0 btn btn-danger" href="{% url 'lista_de_camionetas' %}"><i class="fa-solid fa-left-long"></i></a>   <input class= "btn btn-success text-center" type="submit" value="Buscar"></p>
+</form>
+<br>
+</div>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+{% endblock titulo %}
+{% block contenido %}
+{% endblock contenido %}
+
+{% block info %}
+{% endblock info %}

@@ -1,0 +1,44 @@
+{% extends 'entidades/index.html' %}
+
+{% block menu %}
+<nav class="navbar navbar-dark bg-dark static-top">
+<a class="btn btn-danger" href="{% url 'home2' %}"><i class="fa-solid fa-left-long"></i> Volver</a>
+</nav>
+{% endblock menu %}
+
+{% block titulo %}
+<div class="col-xl-6 container position-relative">
+<div class="bg-dark bg-opacity-75">
+    <h1 class="mt-5">Iniciar sesion</h1>
+    <p> <br> </p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input class= "btn btn-success" type="submit" value="Login">
+    </form>
+</div>
+
+<pre>
+    
+    
+
+</pre>
+
+<div class="bg-dark bg-opacity-75">
+    <h1 class="mt-5">¿No tienes cuenta?</h1>
+    <a class="btn btn-success" href="{% url 'registro' %}">Crear Cuenta</a>
+</div>
+</div>
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+{% endblock contenido %}
+
+
+
+{% block info %}
+{% endblock info %}

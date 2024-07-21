@@ -1,0 +1,77 @@
+{% extends 'entidades/index.html' %}
+
+
+{% block titulo %}
+<pre>
+
+
+
+
+
+
+
+
+</pre>
+<div class="bg-dark bg-opacity-75">
+<h1>Queremos su opinion!</h1>
+<a class="btn btn-success" href="{% url 'reseñaForm' %}">publicar reseña</a>
+<p> <br> </p>
+</div>
+<pre>
+
+
+
+
+
+
+
+
+</pre>
+{% endblock titulo %}
+    
+
+
+{% block contenido %}
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Vehículo</th>
+            <th>Usuario</th> 
+            <th>Puntuacion</th>
+            <th>Contenido</th>
+            <th>acción</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for u in Reseña %}
+        <tr>
+            <td>{{ u.id }}</td>
+            <td>
+                {% if u.automovil %}
+                
+                {{ u.automovil }}
+
+                {% elif u.camioneta %}
+
+                {{ u.camioneta }}
+
+                {% elif u.moto %}
+
+                {{ u.moto }}
+
+                {% endif %}
+            </td>
+            <td>{{ u.usuario }}</td>
+            <td>{{ u.puntuacion }}</td>
+            <td>{{ u.contenido }}</td>
+            <td>
+                {% if u.usuario == request.user %}
+                <a href="{% url 'reseñaDelete' u.id %}" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"><i class="fa fa-trash fa-sm" title="Delete Record"></i></a>
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

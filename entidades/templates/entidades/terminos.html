@@ -1,0 +1,40 @@
+{% extends 'entidades/index.html' %}
+
+
+{% block menu %}
+{% endblock menu %}
+
+{% block titulo %}
+<div class="bg-dark text-white p-4 bg-opacity-50">
+    <h2 class="text-center">Términos de Uso</h2>
+    <p>Bienvenido a nuestro sitio web. Si continúas navegando y utilizando este sitio web, aceptas cumplir y estar sujeto a los siguientes términos y condiciones de uso, que junto con nuestra política de privacidad, rigen la relación de Auto Market con usted en relación a este sitio web. Si no estás de acuerdo con alguna parte de estos términos y condiciones, por favor no uses nuestro sitio web.</p>
+<a class="btn btn-danger" href="{% url 'home' %}"><i class="fa-solid fa-left-long"></i></a>
+</div>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<section id="terminos-de-uso" class="bg-dark text-white p-4">
+    <div class="container">
+        <h3>Uso del sitio web</h3>
+        <p>El contenido de las páginas de este sitio web es solo para tu información general y uso. Está sujeto a cambios sin previo aviso.</p>
+        
+        <h3>Exactitud de la información</h3>
+        <p>Ni nosotros ni terceros proporcionamos ninguna garantía en cuanto a la exactitud, integridad o idoneidad de la información y los materiales encontrados u ofrecidos en este sitio web para ningún propósito particular. Usted reconoce que dicha información y materiales pueden contener inexactitudes o errores y excluimos expresamente la responsabilidad por tales inexactitudes o errores en la máxima medida permitida por la ley.</p>
+        
+        <h3>Uso no autorizado</h3>
+        <p>El uso no autorizado de este sitio web puede dar lugar a una reclamación por daños y/o ser un delito penal.</p>
+        
+        <h3>Enlaces a otros sitios web</h3>
+        <p>Este sitio web puede incluir enlaces a otros sitios web de vez en cuando. Estos enlaces se proporcionan para tu conveniencia para proporcionar más información. No significan que respaldemos el sitio web(s). No tenemos ninguna responsabilidad por el contenido del sitio web enlazado(s).</p>
+        
+        <h3>Modificaciones de los Términos de Uso</h3>
+        <p>Nos reservamos el derecho de realizar cambios y revisar los términos de uso de vez en cuando. Al seguir utilizando nuestro sitio web, aceptas estar sujeto a estos términos.</p>
+        
+        <h3>Contacto</h3>
+        <p>Si tienes alguna pregunta sobre estos términos de uso, puedes contactarnos en: [Tu correo electrónico]</p>
+    </div>
+</section>
+    {% endblock contenido %}
+    
+

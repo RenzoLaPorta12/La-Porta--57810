@@ -1,0 +1,46 @@
+{% extends 'entidades/index.html' %}
+
+{% block titulo %}
+<div class="w-100 p-3 bg-dark bg-opacity-75">
+<h1>Lista de autos disponibles</h1>
+<p><a class="btn btn-success" href="{% url 'buscarAutomovil' %}"> <i class="fa-solid fa-magnifying-glass"></i></a></p>
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Marca</th>
+            <th>Modelo</th> 
+            <th>Año</th>
+            <th>Precio</th>
+            <th>cantidad de pasajeros</th>
+            <th>Vendedor</th>
+            <th>acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for u in automovil_list %}
+        <tr>
+            <td>{{ u.id }}</td>
+            <td>{{ u.marca }}</td>
+            <td>{{ u.modelo }}</td>
+            <td>{{ u.año }}</td>
+            <td>{{ u.precio }}</td>
+            <td>{{ u.pasajeros }}</td>
+            <td>{{ u.vendedor }}</td>
+            <td>
+                {% if u.vendedor == request.user %}
+                <a href="{% url 'automovilUpdate' u.id %}" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                ><i class="fa-solid fa-pen" title="Edit Record"></i>
+                </a>
+                <a href="{% url 'automovilDelete' u.id %}" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>
+                {% endif %}
+            </td>
+        </tr>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock titulo %}

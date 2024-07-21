@@ -1,0 +1,22 @@
+{% extends 'entidades/index.html' %}
+
+
+{% block titulo %}
+<div class= "bg bg-dark bg-opacity-50">
+<h1>Vender una motocicleta nunca fue tan facil!</h1>
+<h5>Nuestro concesionario te ofrece una plataforma segura y eficiente pata publicar tu vehículo</h5>
+</div>
+{% endblock titulo %}
+
+{% block contenido %}
+<section class="bg-dark text-white p-4">
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <p> <input class="btn btn-success" type="submit" value="publicar"> <a class="btn btn-danger" href="{% url 'seleccion' %}">Volver</a></p>
+</form>
+<br>
+</section>
+{% endblock contenido %}

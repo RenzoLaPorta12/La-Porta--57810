@@ -1,0 +1,35 @@
+{% extends 'entidades/index.html' %}
+
+{% block titulo %}
+<pre>
+
+
+
+
+
+
+
+
+</pre>
+<div class="col-xl-11 container position-relative">
+<div class="bg-dark bg-opacity-75">
+<h1 class="md-5 text-light">   ¿Que desea publicar?  </h1>
+    <a class="btn btn-success" href="{% url 'automovilCreate' %}">Automovil</a>
+    <a class="btn btn-success" href="{% url 'camionetaCreate' %}">Camioneta</a>
+    <a class="btn btn-success" href="{% url 'motoCreate' %}">Motocicleta</a><br>
+    <a class="btn btn-danger" href="{% url 'vender' %}">Volver</i></a>
+    <pre>
+    </pre>
+</div>
+<pre>
+
+
+
+
+
+
+
+
+</pre>
+</div>
+{% endblock titulo %}
